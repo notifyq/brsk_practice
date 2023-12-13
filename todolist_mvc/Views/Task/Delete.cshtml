@@ -1,0 +1,21 @@
+﻿@model todolist_mvc.Model.UserTask
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <div>
+        <a asp-action="Index">Назад</a>
+    </div>
+    <div class="task">
+        <h3>Название: @Model.Name</h3>
+        <p>Описание: @Model.Description</p>
+        <p>Дата окончания:
+        @Model.DisplayDate</p>
+        <p>Приоритет: @Model.PriorityNavigation.Name</p>
+    </div>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="@Model.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+    </form>
+}

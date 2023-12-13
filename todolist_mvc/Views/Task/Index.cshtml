@@ -1,0 +1,29 @@
+﻿@model List<todolist_mvc.Model.UserTask>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+
+    <h1>Задачи</h1>
+    <h3><a asp-action="Create">Добавить задачу</a></h3>
+
+    <div>
+        @foreach (var task in Model)
+        {
+            <div class="task">
+                <h3>Название: @task.Name</h3>
+                <p>Описание: @task.Description</p>
+                <p>Дата окончания:
+                @task.DisplayDate</p>
+                <p>Приоритет: @task.PriorityNavigation.Name</p>
+
+                <div class="menu">
+                    <a asp-action="Edit" asp-route-id="@task.Id">Редактировать</a>
+                    <a asp-action="Delete" asp-route-id="@task.Id">Удалить</a>
+                </div>
+            </div>
+        }
+    </div>
+  
+}

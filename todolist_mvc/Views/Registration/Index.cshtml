@@ -1,0 +1,18 @@
+﻿@model todolist_mvc.Models.UserRegistration
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Регистрация</h1>
+<div class="form_auth_block">
+    <div class="form_auth_block_content">
+        <form asp-action="Registration" class="form_auth_style" method="post" id="loginForm">
+            <label>Введите Ваше имя</label>
+            <input asp-for="@Model.UserName" type="text" placeholder="Введите Ваше имя" required>
+            <label>Введите Ваш пароль</label>
+            <input asp-for="@Model.UserPassword" type="password" placeholder="Введите пароль" required>
+            <button class="form_auth_button" type="submit">Войти</button>
+        </form>
+    </div>
+</div>

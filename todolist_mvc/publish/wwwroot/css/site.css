@@ -1,0 +1,27 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+.task {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 10px;
+}
+
+.task:hover {
+        background-color: #f7f7f7;
+}
