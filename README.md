@@ -101,7 +101,7 @@ server {
 
     location / {
     
-        proxy_pass         https://localhost:8080;
+        proxy_pass         https://localhost:5001;
         
         proxy_http_version 1.1;
         
