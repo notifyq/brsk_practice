@@ -1,7 +1,10 @@
 # Практика
 
 ## Установка postgresql
+sudo apt update
+
 sudo apt install postgresql
+
 sudo -u postgres psql
 
 create user <имя_пользователя> with password '<пароль>';
