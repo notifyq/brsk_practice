@@ -1,5 +1,32 @@
 # Практика
 
+## Установка postgresql
+sudo apt install postgresql
+sudo -u postgres psql
+
+create user <имя_пользователя> with password '<пароль>';
+
+CREATE DATABASE <имя_базы>;
+
+GRANT ALL PRIVILEGES ON DATABASE <имя_базы> TO <имя_пользователя>;
+
+sudo systemctl restart postgresql
+
+### Настройка удаленного доступа
+
+sudo nano /etc/postgresql/12/main/postgresql.conf
+
+поменять #listen_addresses = 'localhost' на listen_addresses = '*'
+
+### Разрешение подключения из сети
+
+sudo nano /etc/postgresql/12/main/pg_hba.conf
+
+
+добавить host all <имя_пользователя> <ip_адрес_другой_машины> md5
+
+sudo systemctl restart postgresql
+
 ## Перенос проекта на машину:
 
 scp -r /path/to/your/application username@your_server_ip:/path/to/destination
