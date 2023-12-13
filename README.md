@@ -14,22 +14,40 @@ dotnet publish -o /home/(user_name)/(название папки)
 ## Демонизация systemctl
 
 Создание сервиса:
+
 sudo nano /etc/systemd/system/app.service
 
+
 Конфигурация файла:
+
 [Unit] 
+
 Description= mvcnew webapp
+
+
 [Service] 
+
 WorkingDirectory=/home/(user_name)/(название папки)
+
 ExecStart=/usr/bin/dotnet /home/(user_name)/(название папки)/(название_файла).dll
+
 Restart=always
+
 #Restart service after 10 seconds if the dotnet service crashes:
+
 RestartSec=10
+
 SyslogIdentifier=mvcnew
+
 Environment=ASPNETCORE_ENVIRONMENT=Production
 
+
 [Install]
+
 WantedBy=multi-user.target
+
+
+Команды для запуска:
 
 sudo systectl enable app.service
 
