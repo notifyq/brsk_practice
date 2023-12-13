@@ -13,12 +13,13 @@ dotnet publish -o /home/(user_name)/(название папки)
 
 ## Демонизация systemctl
 
-Создание сервиса:
+### Создание сервиса:
 
 sudo nano /etc/systemd/system/app.service
 
 
-Конфигурация файла:
+### Конфигурация файла:
+
 
 [Unit] 
 
@@ -47,7 +48,8 @@ Environment=ASPNETCORE_ENVIRONMENT=Production
 WantedBy=multi-user.target
 
 
-Команды для запуска:
+
+### Команды для запуска:
 
 sudo systectl enable app.service
 
