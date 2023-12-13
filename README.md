@@ -81,9 +81,9 @@ WantedBy=multi-user.target
 
 ### Команды для запуска:
 
-sudo systectl enable app.service
+sudo systemctl enable app.service
 
-sudo systectl start app.service
+sudo systemctl start app.service
 
 
 ## Настройка nginx
