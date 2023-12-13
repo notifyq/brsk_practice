@@ -87,6 +87,7 @@ sudo systemctl start app.service
 
 
 ## Настройка nginx
+sudo nano /etc/nginx/sites-available/default
 
 server {
 
